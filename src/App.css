@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+section {
+        text-align: center;
+    }
+
+    /* .react-simple-parallax-bg is generate by the component */
+    section .react-simple-parallax-bg {
+        background-image: url('../images/bg.svg');
+        height: 750px;
+    }
+
+    section .parallax {
+        top: 200px;
+        margin: auto;
+    }
