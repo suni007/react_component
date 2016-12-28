@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Slider from 'react-slick';
+import '../css/carousel.css'
 
 export default class MultipleItems extends Component {
   render() {
@@ -8,23 +9,38 @@ export default class MultipleItems extends Component {
       infinite: true,
       speed: 500,
       slidesToShow: 3,
-      slidesToScroll: 3
+      slidesToScroll: 3,
+      autoplay:true,
+      pauseOnHover:true,
+      arrows:true
     };
+    const Items=[{ image: require ('../images/c/1.png') },
+    { image: require ('../images/c/2.png') },
+    { image: require ('../images/c/3.png') },
+    { image: require ('../images/c/4.png') },
+    { image: require ('../images/c/5.png') },
+    { image: require ('../images/c/6.png') },
+    { image: require ('../images/c/7.png') },
+    { image: require ('../images/c/8.png') },
+    { image: require ('../images/c/9.png') }];
+
     return (
-      <div>
-        <h2> Multiple items </h2>
+      <section class="section" id="testimonials">
+      <h1 class="section-heading wow fadeIn" data-wow-delay="0.2s">Our Clients</h1>
+      <div className="cal">
+
         <Slider {...settings}>
-          <div><h3>1</h3></div>
-          <div><h3>2</h3></div>
-          <div><h3>3</h3></div>
-          <div><h3>4</h3></div>
-          <div><h3>5</h3></div>
-          <div><h3>6</h3></div>
-          <div><h3>7</h3></div>
-          <div><h3>8</h3></div>
-          <div><h3>9</h3></div>
+        {Items.map((Item) => {
+          return(
+            <div>
+            <img src={Item.image}  role="presentation"/>
+            </div>
+          );
+        })}
+
         </Slider>
       </div>
+      </section>
     );
   }
 }

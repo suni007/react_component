@@ -3,12 +3,13 @@ import React, { Component } from 'react';
 import './App.css';
 import MenuBur from './component/MenuBur.js';
 import MultipleItems from './component/TestimonialCourasel.js';
-
-import './css/main.css';
+import Price from './component/PriceTable.js';
+import AreaChart from './component/AreaChart.jsx';
 import About from './component/About.js';
+
 import './css/bootstrap.css';
 import './css/about.css';
-import './sass/carousel.min.css';
+import './css/price.css';
 
 
 class App extends Component {
@@ -20,6 +21,9 @@ class App extends Component {
             <div className="container">
               <About/>
               <MultipleItems />
+              <Price />
+              <AreaChart />
+
             </div>
             </main>
           </div >
